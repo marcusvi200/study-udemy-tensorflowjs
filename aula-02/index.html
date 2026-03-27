@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow JS</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/@tensorflow/tfjs/dist/tf.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-warning navbar-primary">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link navbar-brand text-white" href="#">TensorFlow</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container mt-2">
+        <img src="img/tensorflow.svg" width="150" class="float-end" alt="TensorFlowJS">
+        <h2>Inteligência Artificial com JavaScript e TensorFlow.js</h2>
+        <textarea rows="12" name="result" id="result" class="form-control"></textarea>
+
+        <br />
+
+        <button class="btn btn-lg btn-warning" name="action">Executar</button>
+    </div>
+
+    <script type="module" src="js/action.js"></script>
+</body>
+
+</html>
