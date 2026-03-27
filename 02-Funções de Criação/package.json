@@ -1,7 +1,7 @@
 {
-  "name": "aula-02",
+  "name": "secao-03",
   "version": "1.0.0",
-  "description": "Iniciação com TensorFlowJS",
+  "description": "Funções de Criação",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -17,10 +17,12 @@
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",
     "bootstrap": "^5.3.8",
-    "browser-sync": "^3.0.4",
     "jquery": "^4.0.0"
   },
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  },
   "engines": {
-    "node": "> 20.0.0"
+    "node": "> 22.0.0"
   }
 }

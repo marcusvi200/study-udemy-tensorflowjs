@@ -1,0 +1,26 @@
+{
+  "name": "secao-02",
+  "version": "1.0.0",
+  "description": "Construção do Tensor",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "browser-sync -w . --server --files 'index.html, node_modules/*, data/*.json, js/*.js' --port 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tensorflow",
+    "js"
+  ],
+  "author": "Marcus Vinicius",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "bootstrap": "^5.3.8",
+    "browser-sync": "^3.0.4",
+    "jquery": "^4.0.0"
+  },
+  "engines": {
+    "node": "> 22.0.0"
+  }
+}

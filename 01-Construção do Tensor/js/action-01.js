@@ -1,7 +1,7 @@
 /** @type {import('@tensorflow/tfjs')} */
 const tf = window.tf;
 
-$('#result').text('');
+window.SUBSECAO = "01 - Tensores de Uma, Duas, Três, Quatro, Cinco e Seis Dimensões";
 
 function exibir(str = '') {
     $('#result').text(str);
@@ -83,7 +83,3 @@ function executar() {
 
     exibir(txt);
 }
-
-$('button[name="action"]').on('click', () => {
-    executar();
-})
