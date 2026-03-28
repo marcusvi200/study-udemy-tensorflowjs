@@ -7,9 +7,6 @@ $('button[name="action"]').on('click', () => {
     window.EXECUTAR();
 })
 
-/**
- * @type {[key: string]: {title: string, executar: ()=>void}}
- */
 const SUBSECAO = {
     values: {},
     lastKey: undefined,
@@ -17,7 +14,6 @@ const SUBSECAO = {
         let values = title.split('-');
         let key = values[0].trim();
         this.lastKey = key;
-        values.shift();
 
         SUBSECAO.values[key] = { title: title }
     },
