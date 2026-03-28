@@ -1,7 +1,7 @@
 {
-  "name": "secao-02",
+  "name": "secao-04",
   "version": "1.0.0",
-  "description": "Construção do Tensor",
+  "description": "Manipulação de Classes",
   "main": "index.js",
   "type": "module",
   "scripts": {

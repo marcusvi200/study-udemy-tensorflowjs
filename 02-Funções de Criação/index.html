@@ -9,6 +9,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -27,24 +28,49 @@
         <img src="img/tensorflow.svg" width="150" class="float-end" alt="TensorFlowJS">
         <h5>02 - Funções de Criação</h5>
         <span class="badge text-bg-secondary"></span>
-        <div class="mt-2">
-            <textarea rows="12" name="result" id="result" class="form-control"></textarea>
-        </div>
 
         <div class="row my-2">
-            <div class="col-12 d-none" id="multiAction">
+            <div class="col-sm-12 col-lg-10 d-none" id="multiAction">
+                <label class="form-label fw-medium">Ação</label>
                 <select class="form-select" aria-label="Default select example">
                     <option selected disabled>Selecione uma ação disponível</option>
                 </select>
             </div>
-            <div class="col-12 my-2">
-                <button class="btn btn-lg btn-warning" name="action">Executar</button>
-            </div>
-        </div>
 
+            <div class="col d-flex pt-2">
+                <button class="btn btn-lg btn-warning w-100" name="action">Executar</button>
+            </div>
+
+            <div class="col-12 mt-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="border py-2 px-2 rounded overflow-auto" contenteditable="true" id="result"></div>
+                    </div>
+                    <div class="col py-2 px-2 overflow-auto" id="ajuda">
+                        Ajuda
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card bg-dark text-white font-monospace mt-3">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-secondary py-1">
+                        <span class="small uppercase text-light">Console de Saída</span>
+                        <button id="clear-console" class="btn btn-outline-light btn-sm" style="font-size: 0.7rem;">
+                            Limpar Console
+                        </button>
+                    </div>
+                    <div id="console-log-div" class="card-body p-2"
+                        style="height: 200px; overflow-y: auto; font-size: 0.9rem;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <script src="main.js"></script>
+
     <!-- Primeiro tópico -->
     <script src="js/action-01.js"></script>
 
@@ -56,6 +82,9 @@
 
     <!-- Quarto tópico -->
     <script src="js/action-04.js"></script>
+
+    <!-- Quinto tópico -->
+    <script src="js/action-05.js"></script>
 
 </body>
 

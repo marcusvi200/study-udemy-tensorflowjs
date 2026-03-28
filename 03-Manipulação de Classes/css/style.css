@@ -1,0 +1,15 @@
+#ajuda,
+#result {
+    min-height: calc(100vh - 490px);
+    max-height: calc(100vh - 490px);
+}
+
+#result {
+    white-space: pre-wrap;
+    background-color: #282a36 !important;
+    color: #f8f8f2 !important;
+}
+
+#result .text-danger {
+    color: #ffc107 !important;
+}
