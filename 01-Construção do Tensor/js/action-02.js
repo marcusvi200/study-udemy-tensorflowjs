@@ -1,7 +1,4 @@
-/** @type {import('@tensorflow/tfjs')} */
-const tf = window.tf;
-
-window.SUBSECAO = "02 - Tipagem Explícita na Construção do Tensor";
+SUBSECAO.setTitle("02 - Tipagem Explícita na Construção do Tensor");
 
 function exibir(str = '') {
     $('#result').text(str);
@@ -22,3 +19,5 @@ function executar() {
 
     exibir(txt);
 }
+
+SUBSECAO.setExecutar(executar);

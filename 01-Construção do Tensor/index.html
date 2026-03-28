@@ -31,21 +31,29 @@
             <textarea rows="12" name="result" id="result" class="form-control"></textarea>
         </div>
 
-        <br />
-
-        <button class="btn btn-lg btn-warning" name="action">Executar</button>
+        <div class="row my-2">
+            <div class="col-12 d-none" id="multiAction">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected disabled>Selecione uma ação disponível</option>
+                </select>
+            </div>
+            <div class="col-12 my-2">
+                <button class="btn btn-lg btn-warning" name="action">Executar</button>
+            </div>
+        </div>
     </div>
 
-    <!-- MUDAR AQUI PARA "js/action-01.js" para o primeiro tópico -->
-    <!-- <script src="js/action-01.js"></script> -->
+    <script src="main.js"></script>
 
-    <!-- MUDAR AQUI PARA "js/action-02.js" para o segundo tópico -->
-    <!-- <script src="js/action-02.js"></script> -->
+    <!-- Primeiro tópico -->
+    <script src="js/action-01.js"></script>
 
-    <!-- MUDAR AQUI PARA "js/action-padrao.js" para o terceiro tópico -->
+    <!-- Segundo tópico -->
+    <script src="js/action-02.js"></script>
+
+    <!-- Terceiro tópico -->
     <script src="js/action-03.js"></script>
 
-    <script src="main.js"></script>
 </body>
 
 </html>

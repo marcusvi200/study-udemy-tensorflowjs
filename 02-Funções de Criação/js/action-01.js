@@ -1,7 +1,4 @@
-/** @type {import('@tensorflow/tfjs')} */
-const tf = window.tf;
-
-window.SUBSECAO = "01 - Função Fill para Inicialização de Elementos";
+SUBSECAO.setTitle("01 - Função Fill para Inicialização de Elementos");
 
 function exibir(str = '') {
     $('#result').text(str);
@@ -20,3 +17,5 @@ function executar() {
 
     exibir(txt);
 }
+
+SUBSECAO.setExecutar(executar);

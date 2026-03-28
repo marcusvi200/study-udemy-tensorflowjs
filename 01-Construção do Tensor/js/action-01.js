@@ -1,7 +1,4 @@
-/** @type {import('@tensorflow/tfjs')} */
-const tf = window.tf;
-
-window.SUBSECAO = "01 - Tensores de Uma, Duas, Três, Quatro, Cinco e Seis Dimensões";
+SUBSECAO.setTitle("01 - Tensores de Uma, Duas, Três, Quatro, Cinco e Seis Dimensões");
 
 function exibir(str = '') {
     $('#result').text(str);
@@ -83,3 +80,5 @@ function executar() {
 
     exibir(txt);
 }
+
+SUBSECAO.setExecutar(executar);

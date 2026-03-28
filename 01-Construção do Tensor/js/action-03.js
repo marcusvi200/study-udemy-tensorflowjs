@@ -1,7 +1,4 @@
-/** @type {import('@tensorflow/tfjs')} */
-const tf = window.tf;
-
-window.SUBSECAO = "03 - Tensor Padrão do TensorFlow";
+SUBSECAO.setTitle("03 - Tensor Padrão do TensorFlow");
 
 function exibir(str = '') {
     $('#result').text(str);
@@ -24,3 +21,5 @@ function executar() {
 
     exibir(txt);
 }
+
+SUBSECAO.setExecutar(executar);
