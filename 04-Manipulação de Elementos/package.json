@@ -1,0 +1,28 @@
+{
+  "name": "secao-05",
+  "version": "1.0.0",
+  "description": "Manipulação de Elementos",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "browser-sync -w . --server --files 'index.html, data/*.json, js/*.js' --port 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tensorflow",
+    "js"
+  ],
+  "author": "Marcus Vinicius",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  },
+  "engines": {
+    "node": "> 22.0.0"
+  }
+}

@@ -8,17 +8,15 @@ function executar() {
 
     const tensor1 = tf.tensor([1.5, 2.7, 3.1, 4.8, 5.2, 6.9, 7.3, 8.7]);
     const asType = tensor1.asType('int32');
-    
+
     SUBSECAO.setAjuda(
         "asType",
-        `Converte o tensor em um dos tipos: 
-        <ul>
-            <li>bool</li>
-            <li>complex64</li>
-            <li>string</li>
-            <li>float32</li>
-            <li>int32</li>
-        </ul>`
+        `Converte o tensor em um dos tipos:`,
+        '- bool',
+        '- complex64',
+        '- string',
+        '- float32',
+        '- int32',
     );
 
     txt += `<b><i class="text-danger">tf.tensor.asType</i></b>\n`;

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow JS</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/@tensorflow/tfjs/dist/tf.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-warning navbar-primary">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link navbar-brand text-white" href="#">TensorFlow</a>
+            </li>
+        </ul>
+        <div class="navbar-text mx-auto">
+            <h4>Inteligência Artificial com JavaScript e TensorFlow.js</h4>
+        </div>
+    </nav>
+
+    <div class="container mt-2">
+        <img src="img/tensorflow.svg" width="150" class="float-end" alt="TensorFlowJS">
+        <h5>04 - Manipulação de Elementos</h5>
+        <span class="badge text-bg-secondary"></span>
+
+        <div class="row my-2">
+            <div class="col-sm-12 col-lg-10 d-none" id="multiAction">
+                <label class="form-label fw-medium">Ação</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected disabled>Selecione uma ação disponível</option>
+                </select>
+            </div>
+
+            <div class="col d-flex pt-2">
+                <button class="btn btn-lg btn-warning w-100" name="action">Executar</button>
+            </div>
+
+            <div class="col-12 my-2">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="border py-2 px-2 rounded overflow-auto" contenteditable="true" id="result"></div>
+                    </div>
+                    <div class="col-6 py-2 px-2 overflow-auto" id="ajuda">
+                        Ajuda
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card bg-dark text-white font-monospace mt-3">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-secondary py-1">
+                        <span class="small uppercase text-light">Console de Saída</span>
+                        <button id="clear-console" class="btn btn-outline-light btn-sm" style="font-size: 0.7rem;">
+                            Limpar Console
+                        </button>
+                    </div>
+                    <div id="console-log-div" class="card-body p-2"
+                        style="height: 200px; overflow-y: auto; font-size: 0.9rem;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <!-- Primeiro tópico -->
+    <script src="js/action-01.js"></script>
+
+    <!-- Segundo tópico -->
+    <script src="js/action-02.js"></script>
+
+    <!-- Terceiro tópico -->
+    <script src="js/action-03.js"></script>
+
+    <!-- Quarto tópico -->
+    <script src="js/action-04.js"></script>
+
+    <!-- Quinto tópico -->
+    <script src="js/action-05.js"></script>
+
+    <!-- Sexto tópico -->
+    <script src="js/action-06.js"></script>
+
+</body>
+
+</html>

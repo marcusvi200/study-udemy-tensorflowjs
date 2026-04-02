@@ -72,28 +72,28 @@ const SUBSECAO = {
                     help = help.substr(1);
                     appliedI = true;
                 }
-
+                
                 // Para sublinhado
                 if (help.substr(0, 1) == '_') {
                     SUBSECAO.help[keyword] += '<u>';
                     help = help.substr(1);
                     appliedU = true;
                 }
-
+                
                 SUBSECAO.help[keyword] += `${help}`;
-
+                
                 // Para negrito
                 if (appliedB) {
                     SUBSECAO.help[keyword] += '</b>';
                     appliedB = false;
                 }
-
+                
                 // Para itálico
                 if (appliedI) {
                     SUBSECAO.help[keyword] += '</i>';
                     appliedI = false;
                 }
-
+                
                 // Para sublinhado
                 if (appliedU) {
                     SUBSECAO.help[keyword] += '</u>';

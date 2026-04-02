@@ -34,14 +34,83 @@ const SUBSECAO = {
         SUBSECAO.values[key] = { title: title };
         SUBSECAO.help = {};
     },
-    setAjuda: (keyword, helpHtml) => {
+    setAjuda: (keyword, ...helpHtml) => {
         const header = `<h3><b>${keyword}</b></h3><br/>`;
-        if (Object.keys(keyword).includes(keyword)) {
-            SUBSECAO.help[keyword] = `${header}<div class="content-help">${helpHtml}</div>`;
+        if (Array.isArray(helpHtml) && helpHtml.length > 0) {
+            SUBSECAO.help[keyword] = `${header}<div class="content-help">`;
+            let appliedUL = false;
+            let appliedB = false;
+            let appliedI = false;
+            let appliedU = false;
+            for (let [index, help] of Object.entries(helpHtml)) {
+                // Para lista
+                if (appliedUL && help.substr(0, 1) != '-') { SUBSECAO.help[keyword] += `</ul>`; appliedUL = false; }
+
+                SUBSECAO.help[keyword] += index > 0 && !appliedUL && help.substr(0, 1) != '!' ? '\n' : '';
+
+                // Para lista
+                SUBSECAO.help[keyword] += help.substr(0, 1) == '-' && !appliedUL ? '\n<ul>' : '';
+                if (!appliedUL && help.substr(0, 1) == '-') appliedUL = true;
+                SUBSECAO.help[keyword] += help.substr(0, 1) == '-' && appliedUL ? '<li>' : '';
+                if (appliedUL && help.substr(0, 1) == '-') help = help.substr(1);
+
+                // Para a mesma linha
+                if (help.substr(0, 1) === '!') {
+                    help = help.substr(1);
+                }
+
+                // Para negrito
+                if (help.substr(0, 1) == '*') {
+                    SUBSECAO.help[keyword] += '<b>';
+                    help = help.substr(1);
+                    appliedB = true;
+                }
+
+                // Para itálico
+                if (help.substr(0, 1) == '#') {
+                    SUBSECAO.help[keyword] += '<i>';
+                    help = help.substr(1);
+                    appliedI = true;
+                }
+
+                // Para sublinhado
+                if (help.substr(0, 1) == '_') {
+                    SUBSECAO.help[keyword] += '<u>';
+                    help = help.substr(1);
+                    appliedU = true;
+                }
+
+                SUBSECAO.help[keyword] += `${help}`;
+
+                // Para negrito
+                if (appliedB) {
+                    SUBSECAO.help[keyword] += '</b>';
+                    appliedB = false;
+                }
+
+                // Para itálico
+                if (appliedI) {
+                    SUBSECAO.help[keyword] += '</i>';
+                    appliedI = false;
+                }
+
+                // Para sublinhado
+                if (appliedU) {
+                    SUBSECAO.help[keyword] += '</u>';
+                    appliedU = false;
+                }
+
+                // Para lista
+                SUBSECAO.help[keyword] += appliedUL ? '</li>' : '';
+            }
+            // Para lista
+            if (appliedUL) SUBSECAO.help[keyword] += `</ul>`;
+
+            SUBSECAO.help[keyword] += `</div>`;
             return;
         }
-
         SUBSECAO.help[keyword] = `${header}<div class="content-help">${helpHtml}</div>`;
+        return;
     },
     setExecutar: (fn, key = undefined) => {
         SUBSECAO.values[key || this.lastKey]['executar'] = fn

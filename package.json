@@ -1,0 +1,33 @@
+{
+  "name": "tensorflow",
+  "version": "1.0.0",
+  "description": "Inteligência Artificial com Javascript e TensorFlow.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "browser-sync -w . --server --files 'index.html, */.html' --port 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusvi200/study-udemy-tensorflowjs.git"
+  },
+  "keywords": [
+    "tensorflow",
+    "js",
+    "udemy"
+  ],
+  "author": "Marcus Vinicius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcusvi200/study-udemy-tensorflowjs/issues"
+  },
+  "homepage": "https://github.com/marcusvi200/study-udemy-tensorflowjs#readme",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4"
+  }
+}
