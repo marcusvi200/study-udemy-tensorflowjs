@@ -1,4 +1,4 @@
-# Seção 4: Manipulação de Classes
+# Seção 5: Manipulação de Elementos
 
 ## Setup and Run
 
